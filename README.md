@@ -116,10 +116,10 @@ step, which is what keeps real depth affordable on an integrated GPU.
 
 ## Requirements
 
-* macOS 26.0 or later.
+* macOS 14.0 Sonoma or later.
 * Apple silicon. Intel is untested.
 * **Apple Music** — the app, playing locally. Streaming and library tracks both work.
-* Xcode 26+ and XcodeGen to build from source.
+* Xcode 15+ and XcodeGen to build from source.
 * Permission: Automation (Music). Requested on first launch.
 
 ## Installation
@@ -269,7 +269,8 @@ coverage to 24 of 25 while every candidate is still a close match.
 
 * **Spotify support** — blocked on there being any public way to read playback position on macOS. Contributions with a viable approach very welcome.
 * **Notarization**, so the Gatekeeper step above goes away.
-* **Intel and older macOS** testing.
+* **Testing on macOS 14 and 15.** The app targets 14.0 and the compiler confirms every API it uses exists there, but it has only been run on 26 so far.
+* **Intel** testing.
 * More compositions and effects.
 
 ## Building from source

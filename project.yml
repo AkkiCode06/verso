@@ -2,7 +2,7 @@ name: Wavelength
 options:
   bundleIdPrefix: com.akki
   deploymentTarget:
-    macOS: "26.0"
+    macOS: "14.0"
   createIntermediateGroups: true
 
 targets:
@@ -29,4 +29,4 @@ targets:
         DEVELOPMENT_TEAM: ""
         ENABLE_HARDENED_RUNTIME: false
         COMBINE_HIDPI_IMAGES: true
-        MACOSX_DEPLOYMENT_TARGET: "26.0"
+        MACOSX_DEPLOYMENT_TARGET: "14.0"
