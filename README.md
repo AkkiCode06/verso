@@ -1,8 +1,16 @@
 <p align="center">
-  <img src="docs/hero.png" alt="Verso" width="100%">
+  <img src="docs/icon.png" alt="Verso" width="128">
 </p>
 
-<h1 align="center">Verso — Live Lyrics for your macOS Desktop</h1>
+<h1 align="center">Verso</h1>
+
+<p align="center">
+  <b>Live lyrics for your macOS desktop.</b>
+</p>
+
+<p align="center">
+  <img src="docs/hero.png" alt="Verso" width="100%">
+</p>
 
 <p align="center">
   <a href="https://github.com/AkkiCode06/verso/stargazers"><img src="https://img.shields.io/github/stars/AkkiCode06/verso?style=flat-square&color=f0c000" alt="Stars"></a>

@@ -103,11 +103,20 @@ https://github.com/AkkiCode06/verso
 TXT
 
 echo "==> Building disk image"
-hdiutil create \
-    -volname "$APP_NAME" \
-    -srcfolder "$STAGE" \
-    -ov -format UDZO \
-    "$DMG" >/dev/null
+# Built read-write first so the volume icon can be set, then compressed.
+# A volume icon has to be written *inside* the mounted image and flagged
+# there; it cannot be added to a finished read-only dmg.
+RW="$DIST/rw.dmg"
+hdiutil create -volname "$APP_NAME" -srcfolder "$STAGE" -ov -format UDRW "$RW" >/dev/null
+MOUNT=$(hdiutil attach "$RW" -nobrowse -noverify -noautoopen | grep -o '/Volumes/.*$' | head -1)
+
+cp "$APP/Contents/Resources/AppIcon.icns" "$MOUNT/.VolumeIcon.icns"
+# The custom-icon bit is what makes Finder read .VolumeIcon.icns at all.
+SetFile -a C "$MOUNT" 2>/dev/null || true
+
+hdiutil detach "$MOUNT" -quiet
+hdiutil convert "$RW" -format UDZO -imagekey zlib-level=9 -o "$DMG" >/dev/null
+rm -f "$RW"
 
 rm -rf "$STAGE" "$BUILD_DIR"
 
