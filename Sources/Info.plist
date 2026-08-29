@@ -5,7 +5,7 @@
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
 	<key>CFBundleDisplayName</key>
-	<string>Wavelength</string>
+	<string>Verso</string>
 	<key>CFBundleExecutable</key>
 	<string>$(EXECUTABLE_NAME)</string>
 	<key>CFBundleIdentifier</key>
@@ -23,7 +23,7 @@
 	<key>LSUIElement</key>
 	<true/>
 	<key>NSAppleEventsUsageDescription</key>
-	<string>Wavelength reads the currently playing track and its playback position from Music, so it can show lyrics in time with what you are listening to. Nothing leaves your Mac.</string>
+	<string>Verso reads the currently playing track and its playback position from Music, so it can show lyrics in time with what you are listening to. Nothing leaves your Mac.</string>
 	<key>NSHumanReadableCopyright</key>
 	<string>© 2026</string>
 </dict>

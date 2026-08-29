@@ -1,18 +1,18 @@
 <p align="center">
-  <img src="docs/hero.png" alt="Wavelength" width="100%">
+  <img src="docs/hero.png" alt="Verso" width="100%">
 </p>
 
-<h1 align="center">Wavelength — Live Lyrics for your macOS Desktop</h1>
+<h1 align="center">Verso — Live Lyrics for your macOS Desktop</h1>
 
 <p align="center">
-  <a href="https://github.com/AkkiCode06/wavelength/stargazers"><img src="https://img.shields.io/github/stars/AkkiCode06/wavelength?style=flat-square&color=f0c000" alt="Stars"></a>
-  <a href="https://github.com/AkkiCode06/wavelength/network/members"><img src="https://img.shields.io/github/forks/AkkiCode06/wavelength?style=flat-square" alt="Forks"></a>
-  <a href="https://github.com/AkkiCode06/wavelength/releases"><img src="https://img.shields.io/github/v/release/AkkiCode06/wavelength?style=flat-square&color=007AFF" alt="Release"></a>
+  <a href="https://github.com/AkkiCode06/verso/stargazers"><img src="https://img.shields.io/github/stars/AkkiCode06/verso?style=flat-square&color=f0c000" alt="Stars"></a>
+  <a href="https://github.com/AkkiCode06/verso/network/members"><img src="https://img.shields.io/github/forks/AkkiCode06/verso?style=flat-square" alt="Forks"></a>
+  <a href="https://github.com/AkkiCode06/verso/releases"><img src="https://img.shields.io/github/v/release/AkkiCode06/verso?style=flat-square&color=007AFF" alt="Release"></a>
   <a href="LICENSE"><img src="https://img.shields.io/badge/license-GPL--3.0_+_Commons_Clause-blue?style=flat-square" alt="License"></a>
-  <a href="https://github.com/AkkiCode06/wavelength/releases/latest"><img src="https://img.shields.io/badge/⬇︎_Download-for_macOS-000?style=flat-square" alt="Download"></a>
+  <a href="https://github.com/AkkiCode06/verso/releases/latest"><img src="https://img.shields.io/badge/⬇︎_Download-for_macOS-000?style=flat-square" alt="Download"></a>
 </p>
 
-Wavelength turns your desktop wallpaper into a live lyric display. It reads what
+Verso turns your desktop wallpaper into a live lyric display. It reads what
 Apple Music is playing and sets the words across your screen **as they are
 sung** — word by word, not line by line — over GPU effects drawn in colours
 pulled from the album cover. There is no window; it lives in the menu bar and
@@ -21,7 +21,7 @@ draws straight onto the desktop, underneath your icons.
 Inspired by the [Cotodama Lyric Speaker](https://lyric-speaker.com/).
 
 > [!NOTE]
-> **Apple Music only, for now.** Wavelength reads playback through Music's
+> **Apple Music only, for now.** Verso reads playback through Music's
 > public AppleScript dictionary. Spotify exposes no equivalent interface on
 > macOS, so it is not supported yet — see [Roadmap](#roadmap).
 
@@ -52,7 +52,7 @@ Inspired by the [Cotodama Lyric Speaker](https://lyric-speaker.com/).
 <p align="center"><img src="docs/feature-motion.gif" alt="Animated album cover" width="700"></p>
 
 A growing number of Apple Music albums ship an **animated cover** — a short
-looping video the artist supplied alongside the square artwork. Wavelength
+looping video the artist supplied alongside the square artwork. Verso
 fetches it and promotes it to the full background.
 
 * **The album's art direction wins.** When motion artwork exists, every generated effect steps aside — no shader, no pattern, no colour field competing with it.
@@ -124,24 +124,24 @@ step, which is what keeps real depth affordable on an integrated GPU.
 
 ## Installation
 
-1. Download the latest DMG [here](https://github.com/AkkiCode06/wavelength/releases/latest).
-2. Open the DMG and drag Wavelength into Applications.
-3. **Right-click Wavelength → Open**, then **Open** again. Not a double-click — see below.
+1. Download the latest DMG [here](https://github.com/AkkiCode06/verso/releases/latest).
+2. Open the DMG and drag Verso into Applications.
+3. **Right-click Verso → Open**, then **Open** again. Not a double-click — see below.
 4. Grant permission to control Music when asked.
 
 > [!IMPORTANT]
-> ### "Apple could not verify Wavelength is free of malware"
+> ### "Apple could not verify Verso is free of malware"
 >
 > **Expected, and not a statement about this app.** macOS shows that for *every*
 > application not signed with a paid Apple Developer certificate — **$99 a
-> year**. Wavelength is free, so it isn't signed. The warning means *"Apple has
+> year**. Verso is free, so it isn't signed. The warning means *"Apple has
 > not been paid to vouch for this"*, not *"this software is dangerous"*.
 >
 > | | |
 > |---|---|
-> | **Easiest** | **Right-click** Wavelength in Applications → **Open** → **Open**. Once only. |
+> | **Easiest** | **Right-click** Verso in Applications → **Open** → **Open**. Once only. |
 > | **No Open option?** | **System Settings → Privacy & Security** → scroll to **Security** → **"Open Anyway"**. |
-> | **Terminal** | `xattr -dr com.apple.quarantine /Applications/Wavelength.app` |
+> | **Terminal** | `xattr -dr com.apple.quarantine /Applications/Verso.app` |
 
 ## Quick Start
 
@@ -159,9 +159,9 @@ step, which is what keeps real depth affordable on an integrated GPU.
 
 ## Troubleshooting
 
-* **Nothing appears** — check Music is actually playing, and that Wavelength has Automation permission in System Settings → Privacy & Security → Automation.
+* **Nothing appears** — check Music is actually playing, and that Verso has Automation permission in System Settings → Privacy & Security → Automation.
 * **"No lyrics found"** — the track has none at any provider. Instrumentals and very new releases are the usual cases; Settings → Behaviour changes what is shown instead.
-* **Lyrics drift out of time** — Wavelength re-anchors every two seconds and leads by 160ms. A track seeked repeatedly may take a moment to settle.
+* **Lyrics drift out of time** — Verso re-anchors every two seconds and leads by 160ms. A track seeked repeatedly may take a moment to settle.
 * **Fans spinning up** — set Settings → Behaviour → on battery to *Only inexpensive effects*, or pin a light effect such as Ripple, Silk or Aurora.
 * **Nothing after an update** — quit from the menu bar and relaunch; the wallpaper windows are rebuilt at launch.
 
@@ -180,7 +180,7 @@ app's audio stream, and `MediaRemote` — the private framework that used to
 report now-playing state — has been gated behind an entitlement check in
 `mediaremoted` since **macOS 15.4**. Both doors are shut.
 
-So Wavelength reads Music through its public AppleScript dictionary, and takes
+So Verso reads Music through its public AppleScript dictionary, and takes
 everything else from the lyric timeline.
 
 </details>
@@ -277,10 +277,10 @@ coverage to 24 of 25 while every candidate is still a close match.
 
 ```bash
 brew install xcodegen
-git clone https://github.com/AkkiCode06/wavelength.git
-cd wavelength
+git clone https://github.com/AkkiCode06/verso.git
+cd verso
 xcodegen generate
-open Wavelength.xcodeproj
+open Verso.xcodeproj
 ```
 
 The `.xcodeproj` is generated and deliberately not committed — `project.yml` is
@@ -314,7 +314,7 @@ Music locally over AppleScript and never transmitted.
 
 ## Lyrics
 
-Wavelength hosts no lyrics. It queries public providers in order and uses the
+Verso hosts no lyrics. It queries public providers in order and uses the
 first that answers:
 
 1. **[KPoe](https://github.com/Prjkt-La/lyricsplus)** — Apple's own syllable-level timings, the best source
@@ -323,12 +323,12 @@ first that answers:
 4. **LRCLIB plain** — unsynced text as a last resort
 
 **Lyrics are copyrighted works.** These services are free to query, which is not
-the same as the words being unlicensed. Wavelength displays them on your own
+the same as the words being unlicensed. Verso displays them on your own
 machine for personal use, the way any lyrics app does, and stores nothing.
 
 ## License
 
-Wavelength is released under the **GPL-3.0 License with Commons Clause**. Refer
+Verso is released under the **GPL-3.0 License with Commons Clause**. Refer
 to [LICENSE](LICENSE) for the full terms.
 
 Free to use, study, modify and share. **You may not sell it** — the Commons
@@ -337,7 +337,7 @@ someone else's work is not.
 
 ## Acknowledgments
 
-Wavelength builds on the work of several open-source projects and draws
+Verso builds on the work of several open-source projects and draws
 inspiration from a piece of hardware:
 
 * **[Cotodama Lyric Speaker](https://lyric-speaker.com/)** — the entire concept. A speaker whose front face is a display that composes lyrics as they play. The four compositions here are an attempt at its typographic behaviour: the scattered setting, the linked constellation, the mirrored echo, and the editorial spread.

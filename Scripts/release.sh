@@ -1,6 +1,6 @@
 #!/bin/bash
 #
-# Builds Wavelength and packages it as a drag-and-drop disk image.
+# Builds Verso and packages it as a drag-and-drop disk image.
 #
 # The result is unsigned beyond an ad-hoc signature, which is why the README
 # has to explain Gatekeeper to everyone who downloads it. Signing this
@@ -12,12 +12,12 @@ cd "$(dirname "$0")/.."
 ROOT="$PWD"
 DIST="$ROOT/dist"
 STAGE="$DIST/stage"
-APP_NAME="Wavelength"
+APP_NAME="Verso"
 
 VERSION=$(grep 'CFBundleShortVersionString:' project.yml | awk '{print $2}')
 DMG="$DIST/$APP_NAME-$VERSION.dmg"
 
-echo "==> Wavelength $VERSION"
+echo "==> Verso $VERSION"
 
 # The .xcodeproj is generated, not committed, so a clean checkout needs this.
 if ! command -v xcodegen >/dev/null 2>&1; then
@@ -33,7 +33,7 @@ mkdir -p "$STAGE"
 
 # Built outside the repo, in a path with no spaces: Xcode's build database
 # has been seen to fail with a disk I/O error under the project directory.
-BUILD_DIR="/tmp/wavelength-release-build"
+BUILD_DIR="/tmp/verso-release-build"
 rm -rf "$BUILD_DIR"
 
 # PIPESTATUS, not the pipeline's status: piping into grep would otherwise
@@ -70,19 +70,19 @@ ln -s /Applications "$STAGE/Applications"
 # A short README on the image itself, because the Gatekeeper warning appears
 # before anyone has reason to go back to the GitHub page.
 cat > "$STAGE/Read me first.txt" <<'TXT'
-Wavelength
+Verso
 ==========
 
-1. Drag Wavelength onto the Applications folder.
+1. Drag Verso onto the Applications folder.
 
 2. The first time you open it, macOS will refuse, saying Apple could not
-   verify it is free of malware. This is expected. Wavelength is not signed
+   verify it is free of malware. This is expected. Verso is not signed
    with a paid Apple Developer certificate, and macOS distrusts any app that
    is not, regardless of what it does.
 
    To open it anyway:
 
-     - Open Applications, right-click (or Control-click) Wavelength,
+     - Open Applications, right-click (or Control-click) Verso,
        and choose Open.
      - Click Open in the dialog that appears.
 
@@ -90,16 +90,16 @@ Wavelength
 
    If the Open option does not appear, go to System Settings > Privacy &
    Security, scroll to Security, and click "Open Anyway" next to the
-   message about Wavelength.
+   message about Verso.
 
-3. Wavelength will ask permission to control Music. It needs this to read
+3. Verso will ask permission to control Music. It needs this to read
    what is playing and where you are in the track. Nothing leaves your Mac.
 
 4. It runs in the menu bar -- look for the waveform icon. There is no
    window; your desktop is the window.
 
 Source, and a fuller explanation of the security warning:
-https://github.com/AkkiCode06/wavelength
+https://github.com/AkkiCode06/verso
 TXT
 
 echo "==> Building disk image"

@@ -367,7 +367,7 @@ struct BehaviourPane: View {
                 subtitle: "How hard to work, and what to show when a track has no words."
             )
 
-            setting("Launch at login", "Start Wavelength when you sign in to this Mac.") {
+            setting("Launch at login", "Start Verso when you sign in to this Mac.") {
                 VStack(alignment: .leading, spacing: 4) {
                     Toggle("", isOn: $settings.launchAtLogin)
                         .toggleStyle(.switch)

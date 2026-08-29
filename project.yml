@@ -1,4 +1,4 @@
-name: Wavelength
+name: Verso
 options:
   bundleIdPrefix: com.akki
   deploymentTarget:
@@ -6,7 +6,7 @@ options:
   createIntermediateGroups: true
 
 targets:
-  Wavelength:
+  Verso:
     type: application
     platform: macOS
     sources:
@@ -14,15 +14,15 @@ targets:
     info:
       path: Sources/Info.plist
       properties:
-        CFBundleDisplayName: Wavelength
+        CFBundleDisplayName: Verso
         CFBundleShortVersionString: 0.1.0
         CFBundleVersion: "1"
         LSUIElement: true
         NSHumanReadableCopyright: © 2026
-        NSAppleEventsUsageDescription: Wavelength reads the currently playing track and its playback position from Music, so it can show lyrics in time with what you are listening to. Nothing leaves your Mac.
+        NSAppleEventsUsageDescription: Verso reads the currently playing track and its playback position from Music, so it can show lyrics in time with what you are listening to. Nothing leaves your Mac.
     settings:
       base:
-        PRODUCT_BUNDLE_IDENTIFIER: com.akki.wavelength
+        PRODUCT_BUNDLE_IDENTIFIER: com.akki.verso
         SWIFT_VERSION: "5.0"
         CODE_SIGN_IDENTITY: "-"
         CODE_SIGN_STYLE: Manual

@@ -38,7 +38,7 @@ final class NowPlayingMonitor: ObservableObject {
     @Published private(set) var motionArtwork: MotionArtworkProvider.Motion?
 
     private let musicBundleID = "com.apple.Music"
-    private let scriptQueue = DispatchQueue(label: "com.akki.wavelength.applescript")
+    private let scriptQueue = DispatchQueue(label: "com.akki.verso.applescript")
     private var compiledScripts: [String: NSAppleScript] = [:]
     private var anchor: (position: TimeInterval, at: Date)?
     private var syncTimer: Timer?

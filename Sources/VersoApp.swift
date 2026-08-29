@@ -1,7 +1,7 @@
 import SwiftUI
 
 @main
-struct WavelengthApp: App {
+struct VersoApp: App {
     @NSApplicationDelegateAdaptor(AppDelegate.self) private var appDelegate
     @StateObject private var nowPlaying = NowPlayingMonitor.shared
 

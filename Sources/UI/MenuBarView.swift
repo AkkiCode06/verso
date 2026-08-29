@@ -25,7 +25,7 @@ struct MenuBarView: View {
 
             Divider().padding(.vertical, 8)
 
-            menuItem("Quit Wavelength", symbol: "power") {
+            menuItem("Quit Verso", symbol: "power") {
                 NSApplication.shared.terminate(nil)
             }
         }

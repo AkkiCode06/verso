@@ -23,7 +23,7 @@ actor GoogleFontsProvider {
 
     private var cacheDirectory: URL {
         let base = FileManager.default.homeDirectoryForCurrentUser
-            .appendingPathComponent("Library/Application Support/Wavelength/Fonts")
+            .appendingPathComponent("Library/Application Support/Verso/Fonts")
         try? FileManager.default.createDirectory(at: base, withIntermediateDirectories: true)
         return base
     }

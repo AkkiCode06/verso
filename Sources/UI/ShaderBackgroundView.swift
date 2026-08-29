@@ -205,7 +205,7 @@ enum ShaderStyle: String, CaseIterable, Identifiable {
             h = (h ^ (s & 0xFF)) &* 1099511628211
             s >>= 8
         }
-        for byte in "wavelength".utf8 { h = (h ^ UInt64(byte)) &* 1099511628211 }
+        for byte in "verso".utf8 { h = (h ^ UInt64(byte)) &* 1099511628211 }
         // splitmix64 finalizer.
         h ^= h >> 30; h = h &* 0xBF58476D1CE4E5B9
         h ^= h >> 27; h = h &* 0x94D049BB133111EB

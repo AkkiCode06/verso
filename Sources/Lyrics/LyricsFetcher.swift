@@ -120,7 +120,7 @@ final class LyricsFetcher {
 
         do {
             var request = URLRequest(url: url)
-            request.setValue("Wavelength v0.1 (macOS now-playing lyrics)", forHTTPHeaderField: "User-Agent")
+            request.setValue("Verso v0.1 (macOS now-playing lyrics)", forHTTPHeaderField: "User-Agent")
             let (data, response) = try await URLSession.shared.data(for: request)
             guard let http = response as? HTTPURLResponse, http.statusCode == 200 else { return nil }
             return try JSONDecoder().decode(Response.self, from: data)

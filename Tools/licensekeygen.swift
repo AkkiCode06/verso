@@ -1,4 +1,4 @@
-// Wavelength licence tool.
+// Verso licence tool.
 //
 // Run with:  swift Tools/licensekeygen.swift <command>
 //
