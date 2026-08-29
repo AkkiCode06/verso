@@ -12,3 +12,6 @@ DerivedData/
 *.xcuserstate
 
 .DS_Store
+
+# README assets
+!docs/
